@@ -1,0 +1,26 @@
+spring:
+  datasource: # DB
+#    url: jdbc:h2:file:yobi-next
+#    driverClassName: org.h2.Driver
+#    username:
+#    password:
+    url: jdbc:mysql://localhost/yobi?characterEncoding=utf8
+    driverClassName: com.mysql.jdbc.Driver
+    username: yobi
+    password: yobi
+  jpa: # JPA
+    openInView: true
+    show-sql: true
+    database: MySQL
+    hibernate.ddl-auto: update
+  view:
+    prefix: /WEB-INF/jsp/
+    suffix: .jsp
+error:
+  whitelabel:
+    enabled: true
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.hibernate: DEBUG
