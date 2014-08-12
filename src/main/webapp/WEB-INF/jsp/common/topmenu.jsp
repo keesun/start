@@ -19,6 +19,13 @@
                 </sec:authorize>
                 <sec:authorize access="isAuthenticated()">
                     <sec:authentication property="principal" var="principal" />
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">New <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Project</a></li>
+                            <li><a href="#">Group</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">${principal.user.name}</a></li>
                     <li><a href="/users/logout">Logout</a></li>
                 </sec:authorize>
